@@ -18,6 +18,11 @@ button:hover {
     cursor: pointer;
 }
 
+img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
 #play-scissors {
     background-color: #fa5a5a;
 }

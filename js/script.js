@@ -40,10 +40,10 @@ function displayResult(computerMove, playerInput){
             printMessage('Coś nie pykło');
     }
 
-        playGame = function(playerInput) {
+        function playGame(playerInput) {
         clearMessages();
-        const randomNumber = Math.floor(Math.random() * 3 + 1);
-        const computerMove = getMoveName(randomNumber);
+        randomNumber = Math.floor(Math.random() * 3 + 1);
+        computerMove = getMoveName(randomNumber);
         printMessage('Mój ruch to: ' + computerMove);
         printMessage('Twój ruch to: ' + playerInput);
         displayResult(computerMove, playerInput);
