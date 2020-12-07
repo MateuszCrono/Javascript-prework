@@ -1,7 +1,11 @@
-let computerMove = `kamień`;
+let randomFraction = Math.random();
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+printMessage('Wylosowany ułamek to: ' + randomFraction);
 
-let PlayerMove = `papier`;
+let calculation = randomFraction * 3 + 1;
 
-printMessage('Zagrałem ' + playerMove );
+printMessage('Ułamek pomnożony przez 3 i powiększony o 1: ' + calculation);
+
+let roundNumber = Math.floor(calculation);
+
+printMessage('Liczba po zaokrągleniu w dół to: ' + roundNumber);
