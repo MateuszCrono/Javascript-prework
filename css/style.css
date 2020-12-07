@@ -1,1 +1,29 @@
 /* Global */
+
+body {
+    margin: 100px 0;
+	background: #eaedf1;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+button {
+    padding: 20px 40px; 
+    font-size: 22px;
+    border: 2px solid 5px;
+    border-radius: 10px;
+    margin: 40px 5px;
+}
+button:hover {
+    cursor: pointer;
+}
+
+#play-scissors {
+    background-color: #fa5a5a;
+}
+#play-rock {
+    background-color: #82c8a0;
+}
+#play-paper  {
+    background-color: #6698cb;
+}
