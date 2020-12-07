@@ -42,13 +42,12 @@ if( computerMove == 'kamień' && playerMove == 'papier'){
     printMessage('Ty wygrywasz!');
 }   else if( computerMove == 'papier' && playerMove == 'kamień'){
     printMessage('Komputer wygrał!');
-}   else if( computerMove == 'kamień' && playerMove == 'kamień'){
-        printMessage('Mamy remis!');
 }   else if( computerMove == 'nożyce' && playerMove == 'papier'){
         printMessage('Komputer wygrał!');
 }   else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
         printMessage('Mamy remis!');
 }   else if( computerMove == 'nożyce' && playerMove == 'kamień'){
         printMessage('Ty wygrywasz!');
-    else( playerMove == 'nieznany ruch'){
-        printMessage('Coś nie pykło');
+}   else if( playerMove == 'nieznany ruch'){
+        printMessage('Coś nie pykło')
+}
