@@ -13,34 +13,38 @@ function getMoveName(argMoveId){
 
 function displayResult(computerMove, playerInput){
     printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerInput);
-    if( computerMove == 'kamień' && playerInput == 'papier'){
+    if(computerMove == 'kamień' && playerInput == 'papier'){
         printMessage('Ty wygrywasz!');
     }  
-    if( computerMove == 'kamień' && playerInput == 'nożyce'){
+    else if(computerMove == 'kamień' && playerInput == 'nożyce'){
         printMessage('Komputer wygrał!');
     }
-    if( computerMove == 'kamień' && playerInput == 'kamień'){
+    else if(computerMove == 'kamień' && playerInput == 'kamień'){
         printMessage('Mamy remis!');
     }
-    if( computerMove == 'papier' && playerInput == 'papier'){
+    else if(computerMove == 'papier' && playerInput == 'papier'){
         printMessage('Mamy remis!');
     }
-    if( computerMove == 'papier' && playerInput == 'nożyce'){
+    else if(computerMove == 'papier' && playerInput == 'nożyce'){
         printMessage('Ty wygrywasz!');
-    }
-    if( computerMove == 'papier' && playerInput == 'kamień'){
+    }    
+    else if(computerMove == 'papier' && playerInput == 'kamień'){
         printMessage('Komputer wygrał!');
-    }   else if( computerMove == 'nożyce' && playerInput == 'papier'){
+    }   
+    else if(computerMove == 'nożyce' && playerInput == 'papier'){
             printMessage('Komputer wygrał!');
-    }   else if( computerMove == 'nożyce' && playerInput == 'nożyce'){
+    }   
+    else if(computerMove == 'nożyce' && playerInput == 'nożyce'){
             printMessage('Mamy remis!');
-    }   else if( computerMove == 'nożyce' && playerInput == 'kamień'){
+    }   
+    else if(computerMove == 'nożyce' && playerInput == 'kamień'){
             printMessage('Ty wygrywasz!');
-    }   else if( playerInput == 'nieznany ruch')
+    }   
+    else
             printMessage('Coś nie pykło');
     }
 
-        function playGame(playerInput) {
+function playGame(playerInput) {
         clearMessages();
         randomNumber = Math.floor(Math.random() * 3 + 1);
         computerMove = getMoveName(randomNumber);
