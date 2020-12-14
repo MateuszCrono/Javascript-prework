@@ -28,7 +28,6 @@ function displayResult(computerMove, playerInput){
     }
     else if(computerMove == 'papier' && playerInput == 'nożyce'){
         printMessage('Ty wygrywasz!');
-        playerScore++
     }    
     else if(computerMove == 'papier' && playerInput == 'kamień'){
         printMessage('Komputer wygrał!');
