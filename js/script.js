@@ -1,4 +1,5 @@
 /* Function */
+{
 
 function getMoveName(argMoveId){
     if(argMoveId == 1){
@@ -10,10 +11,9 @@ function getMoveName(argMoveId){
     else {}
     return 'nieznany ruch';}
 
-
 function displayResult(computerMove, playerInput){
     printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerInput);
-    if(computerMove == 'kamień' && playerInput == 'papier'){
+    if(computerMove == 'kamień' && playerInput == 'papier') {
         printMessage('Ty wygrywasz!');
     }  
     else if(computerMove == 'kamień' && playerInput == 'nożyce'){
@@ -24,12 +24,15 @@ function displayResult(computerMove, playerInput){
     }
     else if(computerMove == 'papier' && playerInput == 'papier'){
         printMessage('Mamy remis!');
+        
     }
     else if(computerMove == 'papier' && playerInput == 'nożyce'){
         printMessage('Ty wygrywasz!');
+        playerScore++
     }    
     else if(computerMove == 'papier' && playerInput == 'kamień'){
         printMessage('Komputer wygrał!');
+
     }   
     else if(computerMove == 'nożyce' && playerInput == 'papier'){
             printMessage('Komputer wygrał!');
@@ -44,15 +47,6 @@ function displayResult(computerMove, playerInput){
             printMessage('Coś nie pykło');
     }
 
-function playGame(playerInput) {
-        clearMessages();
-        randomNumber = Math.floor(Math.random() * 3 + 1);
-        computerMove = getMoveName(randomNumber);
-        printMessage('Mój ruch to: ' + computerMove);
-        printMessage('Twój ruch to: ' + playerInput);
-        displayResult(computerMove, playerInput);
-    }
-
     document.getElementById('play-rock').addEventListener("click", function () {
 	playGame('kamień');
     });
@@ -64,3 +58,15 @@ function playGame(playerInput) {
     document.getElementById('play-scissors').addEventListener("click", function () {
 	playGame('nożyce');
     });
+    
+function playGame(playerInput) {
+    clearMessages();
+    randomNumber = Math.floor(Math.random() * 3 + 1);
+    computerMove = getMoveName(randomNumber);
+    printMessage('Mój ruch to: ' + computerMove);
+    printMessage('Twój ruch to: ' + playerInput);
+    displayResult(computerMove, playerInput);
+    printMessage(playerScore + ':' + computerScore);
+}
+
+}
